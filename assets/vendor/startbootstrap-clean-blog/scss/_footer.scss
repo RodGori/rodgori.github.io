@@ -1,0 +1,31 @@
+// Styling for the footer
+footer {
+  background-color: #4B70D0;
+  padding: 10px 0 10px;
+  .list-inline {
+    margin: 5px;
+    padding: 0;
+  }
+  .list-inline-item{
+    a{
+      color: #ffffff !important;
+    }
+ }
+
+  .footer-text {
+    @include sans-serif-font;
+    font-size: 12px;
+    margin: 1.45rem 0 0.05rem;
+    text-align: center;
+    color: #ffffff !important;
+    text-transform: uppercase;
+    font-weight: 800;
+  }
+
+  .fa-inverse{
+    color: #4B70D0 !important;
+  }
+
+}
+
+

@@ -1,0 +1,24 @@
+html{
+    overflow-x: hidden;
+}
+
+body{
+    background-color: #4B70D0 !important;
+    margin:0;
+    padding:0;
+    overflow-x: hidden;
+}
+
+
+
+@import "variables.scss";
+@import "mixins.scss";
+@import "global.scss";
+@import "navbar.scss";
+@import "masthead.scss";
+@import "post.scss";
+@import "page.scss";
+@import "contact.scss";
+@import "footer.scss";
+@import "home.scss";
+@import "bootstrap-overrides.scss";

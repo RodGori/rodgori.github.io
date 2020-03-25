@@ -1,0 +1,43 @@
+#home-container{
+    width:99vw; 
+    height:77vh;
+    margin-top: 7vh;
+    padding-top:14vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+//     background-image: url("/img/plant_logo.png");
+//     background-repeat: no-repeat;
+//     background-position: 52% 40%;
+//     background-size: 20% auto;
+}
+
+#home-title{
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 600;
+    line-height: 5rem;
+    color: #E7E7E7;
+}
+
+#home-subtitle{
+    text-align: center;
+    font-size: 1.65rem;
+    font-weight: 600;
+    color: #9BE3BF;
+}
+
+#home-logo-container{
+    width: auto;
+    
+    
+    #home-logo{
+        margin:auto;
+        display:block;
+        background-image: url("/img/plant_logo.png");
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        min-height: 250px;
+        max-height: 250px;
+        min-width: 300px;
+        max-width: 300px;
+    }
+}

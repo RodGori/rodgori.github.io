@@ -1,0 +1,117 @@
+$nav-background-color: #4B70D0;
+$nav-font-color: #fff;
+
+// Styling for the navbar
+.navbar-light .navbar-nav .nav-link {
+  color:$nav-font-color;
+
+  &:focus,
+  &:hover{
+    border-bottom: 2px solid $nav-font-color;
+  }
+
+}
+
+.navbar-active {
+  color: #69559D !important;
+  background-color: white;
+}
+
+#mainNav {
+  position: absolute;
+  background-color: $nav-background-color;
+  @include sans-serif-font;
+  .navbar-brand {
+    font-weight: 800;
+    color: $nav-font-color;
+  }
+  .navbar-toggler {
+    font-size: 12px;
+    font-weight: 800;
+    padding: 13px;
+    text-transform: uppercase;
+    color: $nav-font-color;
+  }
+  .navbar-nav {
+    > li.nav-item {
+      > a {
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        padding: 10px 20px;
+      }
+    }
+  }
+  @media only screen and (min-width: 992px) {
+    border-bottom: 1px solid transparent;
+    background: transparent;
+    .navbar-brand {
+      padding: 10px 20px;
+      color: $nav-font-color;
+      &:focus,
+      &:hover {
+        color: fade-out(white, .02);
+      }
+    }
+    .navbar-nav {
+      > li.nav-item {
+        > a {
+          color:$nav-font-color;
+          &:focus,
+          &:hover {
+            color: fade-out(white, .2);
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (min-width: 992px) {
+    -webkit-transition: background-color 0.2s;
+    -moz-transition: background-color 0.2s;
+    transition: background-color 0.2s;
+    /* Force Hardware Acceleration in WebKit */
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    &.is-fixed {
+      /* when the user scrolls down, we hide the header right above the viewport */
+      position: fixed;
+      top: -67px;
+      -webkit-transition: -webkit-transform 0.2s;
+      -moz-transition: -moz-transform 0.2s;
+      transition: transform 0.2s;
+      border-bottom: 1px solid darken($nav-background-color, .05);
+      background-color: fade-out($nav-background-color, .5);
+      .navbar-brand {
+        color: $nav-font-color;
+        &:focus,
+        &:hover {
+          color: white;
+        }
+      }
+      .navbar-nav {
+        > li.nav-item {
+          > a {
+            color: $nav-font-color;
+            &:focus,
+            &:hover {
+              color: white;
+            }
+          }
+        }
+      }
+    }
+    &.is-visible {
+      /* if the user changes the scrolling direction, we show the header */
+      -webkit-transform: translate3d(0, 100%, 0);
+      -moz-transform: translate3d(0, 100%, 0);
+      -ms-transform: translate3d(0, 100%, 0);
+      -o-transform: translate3d(0, 100%, 0);
+      transform: translate3d(0, 100%, 0);
+    }
+  }
+}

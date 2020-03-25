@@ -1,0 +1,61 @@
+---
+layout: posts
+title: Relatos
+description: De mamarrachos con forma de letra amontonados a renglones hechos historias.
+background: '/img/relatos.png'
+slug: posts
+---
+
+  
+{% for post in paginator.posts %}
+
+  <div class="row">      
+
+    <div class="d-none d-xl-block col-xl-1"></div>
+
+    <div class="col-md-2 col-sm-12 col-lg-1">        
+      <div class="post-date">
+        {{ post.date | date: '%d/%m/%Y' }} 
+      </div>
+    </div>    
+      
+    <div class="col-md-10 col-8-sm col-lg-10">
+      <div class="post-preview">          
+        <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+          <div class="post-title">{{ post.title }}</div>
+          {% if post.subtitle %}
+          <div class="post-subtitle">{{ post.subtitle }}</div>
+          {% else %}
+          <div class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</div>
+          {% endif %}
+        </a>
+        <div class="post-meta">
+            {% include read_time.html content=post.content %}
+        </div>
+      </div>
+    </div>      
+
+  </div> 
+  
+  <hr>
+
+{% endfor %}
+
+
+<!-- Pager -->
+{% if paginator.total_pages > 1 %}
+
+<div class="clearfix">
+
+  {% if paginator.previous_page %}
+  <a class="btn float-left paginator-btn" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr;
+    Newer<span class="d-none d-md-inline"> Posts</span></a>
+  {% endif %}
+
+  {% if paginator.next_page %}
+  <a class="btn float-right paginator-btn" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older<span class="d-none d-md-inline"> Posts</span> &rarr;</a>
+  {% endif %}
+
+</div>
+
+{% endif %}
