@@ -1,13 +1,16 @@
 #home-container{
     width:99vw; 
-    height:77vh;
+
+    @media (min-width: 769px){
+        height:84vh;
+    }
+    @media (max-width: 768px){
+        height:75vh;
+    }       
+
     margin-top: 7vh;
-    padding-top:14vh;
+    padding-top:21vh;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-//     background-image: url("/img/plant_logo.png");
-//     background-repeat: no-repeat;
-//     background-position: 52% 40%;
-//     background-size: 20% auto;
 }
 
 #home-title{
