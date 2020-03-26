@@ -26,6 +26,12 @@ footer {
     color: #4B70D0 !important;
   }
 
+  .social-icons{
+    @media (max-width:768px) {
+      margin-top:10px;
+    }
+  }
+
 }
 
 
