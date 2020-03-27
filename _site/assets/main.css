@@ -28,6 +28,12 @@ img::selection { color: #fff; background: transparent; }
 
 img::-moz-selection { color: #fff; background: transparent; }
 
+#error-container { width: 99vw; color: white; text-align: center; margin-top: 7vh; padding-top: 14vh; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+@media (min-width: 769px) { #error-container { height: 84vh; } }
+
+@media (max-width: 768px) { #error-container { height: 75vh; } }
+
 .navbar-light .navbar-nav .nav-link { color: #fff; }
 
 .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover { border-bottom: 2px solid #fff; }
@@ -89,7 +95,7 @@ header.masthead .post-heading .meta a { color: #fff; }
 
 @media (min-width: 990px) and (max-width: 1500px) { .post-preview { padding: 0 50px; } }
 
-.posts-content-container { background-color: #eee; padding: 25px 25px; }
+.posts-content-container { background-color: #eee; padding: 25px 25px; min-height: 39vh; }
 
 .post-date { text-align: left; color: #4B70D0; font-weight: 600; padding-top: 25px; }
 
@@ -107,7 +113,7 @@ a .post-subtitle { font-weight: 300; }
 
 .paginator-btn { background-color: #69559D !important; color: white; }
 
-.page-content-container { background-color: #eee; padding: 25px 0; }
+.page-content-container { background-color: #eee; padding: 25px 0; min-height: 39vh; }
 
 .page-content { color: #5D5965; padding: 0 40px; }
 
@@ -137,7 +143,13 @@ footer .footer-text { font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Ari
 
 footer .fa-inverse { color: #4B70D0 !important; }
 
-#home-container { width: 99vw; height: 77vh; margin-top: 7vh; padding-top: 14vh; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+@media (max-width: 768px) { footer .social-icons { margin-top: 10px; } }
+
+#home-container { width: 99vw; margin-top: 7vh; padding-top: 21vh; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+@media (min-width: 769px) { #home-container { height: 84vh; } }
+
+@media (max-width: 768px) { #home-container { height: 75vh; } }
 
 #home-title { text-align: center; font-size: 5rem; font-weight: 600; line-height: 5rem; color: #E7E7E7; }
 
