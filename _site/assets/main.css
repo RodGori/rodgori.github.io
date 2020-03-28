@@ -159,6 +159,10 @@ footer .fa-inverse { color: #4B70D0 !important; }
 
 #home-logo-container #home-logo { margin: auto; display: block; background-image: url("/img/plant_logo.png"); background-size: 100% auto; background-repeat: no-repeat; min-height: 250px; max-height: 250px; min-width: 300px; max-width: 300px; }
 
+#cc-licence-container { font-size: 1rem; text-align: center; }
+
+#cc-licence-container a { color: #69559D; font-weight: 700; }
+
 .btn { font-size: 14px; font-weight: 800; padding: 15px 25px; letter-spacing: 1px; text-transform: uppercase; border-radius: 0; font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 
 .btn-primary { background-color: #0085A1; border-color: #0085A1; }
