@@ -1,0 +1,44 @@
+---
+layout: page
+title: ¿Quieres ayudar a RG?
+description: Acá sabrás cómo hacerlo
+background: '/img/apoya-rg.png'
+slug: apoyar-rg
+url: 'apoyar-rg.html'
+image:
+  path: '/img/apoya-rg.png'
+  height: 800
+  width: 300
+  locale: es
+---
+
+<p>
+Al igual que una planta necesita agua y sol para vivir, un blog necesita lectores, fondos y mucha inspiración. Es por eso que tenemos una serie de acciones que puedes realizar para apoyar al escritor:
+</p>
+
+<ol id="support-container">
+  <li>
+    Seguir al escritor en redes sociales:
+    {% if site.twitter_username %}
+      <a href="https://twitter.com/{{ site.twitter_username }}"> Twitter </a> | 
+    {% endif %}
+    {% if site.facebook_username %}
+      <a href="https://facebook.com/{{ site.facebook_username }}"> Facebook</a>
+    {% endif %}
+    . 
+  </li>
+  <li>
+    Comparte los relatos que más te gustan con tus amigos. Dedica frases. Léele los relatos de escritor a tu gato, a tu perro. <b>Recomiéndale al mundo este blog</b>.
+  </li>
+  <li>
+    Si encuentras un error, no dudes en escribirle al escritor. Hasta los mejores se equivocan. <br/>
+    <i>—Guiño—</i>
+  </li>
+  <li>
+    Puedes <a href="mailto:{{ site.email | encode_email }}">enviarle un correo</a> preguntando cuándo va a haber una nueva publicación o sugiriendo algún tema para un relato.
+  </li>
+  <li>
+    Puedes financiar más experimentos mediante un <a href="/aportes">aporte económico.</a>
+  </li>
+</ol>
+

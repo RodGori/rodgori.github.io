@@ -31,27 +31,28 @@ layout: default
        <div class="d-block .d-sm-none .d-md-none col-lg-3"></div>
 
         <div class="col-sm-10 col-md-10 col-lg-6 mx-auto page-content">
+         
+
           {{ content }}
-        <hr>
+          <hr>
 
-         {% include cc-licence.html %} 
+          {% include cc-licence.html %} 
+          {% comment %} <hr> {% endcomment %}
 
-        <hr>
+          {% comment %} {% include payment.html %}  {% endcomment %}
 
-        {% include payment.html %} 
+          <div class="clearfix">
 
-        <div class="clearfix">
+            {% if page.previous.url %}
+            <a class="btn paginator-btn float-left" href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.previous.title }}">&larr; Previous<span class="d-none d-md-inline">
+                Post</span></a>
+            {% endif %}
+            {% if page.next.url %}
+            <a class="btn paginator-btn float-right" href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.next.title }}">Next<span class="d-none d-md-inline">
+                Post</span> &rarr;</a>
+            {% endif %}
 
-          {% if page.previous.url %}
-          <a class="btn paginator-btn float-left" href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.previous.title }}">&larr; Previous<span class="d-none d-md-inline">
-              Post</span></a>
-          {% endif %}
-          {% if page.next.url %}
-          <a class="btn paginator-btn float-right" href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.next.title }}">Next<span class="d-none d-md-inline">
-              Post</span> &rarr;</a>
-          {% endif %}
-
-        </div>
+          </div>
       </div>
       <div class="d-block .d-sm-none .d-md-none col-lg-3"></div>
     </div>

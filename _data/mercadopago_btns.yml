@@ -1,0 +1,4 @@
+- url: https://www.mercadopago.com.co/checkout/v1/redirect?pref_id=540001044-3c152d71-adab-46c0-ae2e-f9aa5cd64a89
+  title: Aportar 5.000 COP
+- url: https://www.mercadopago.com.co/checkout/v1/redirect?pref_id=540001044-9ec17571-83e1-401c-9b34-b2cbef9fd366
+  title: Aportar 10.000 COP
