@@ -1,0 +1,19 @@
+.pagination-container{
+    margin: 20px auto;
+}
+
+.paginator-btn{
+  
+    background-color: #69559D !important;
+    color: white;
+    margin-right: 10px;
+  
+    &:hover{
+      color: white;
+    }
+  }
+
+  .page-number{
+      font-weight: bolder;
+      font-size: 1.5rem;
+  }

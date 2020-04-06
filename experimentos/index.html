@@ -1,0 +1,171 @@
+---
+layout: default
+title: Creaciones garabáticas... etc.
+description: Relatos, ilustraciones, y más.
+background: "/img/experimentos.jpg"
+slug: experimentos
+
+image:
+  path: "/img/experimentos.jpg"
+  height: 800
+  width: 300
+  locale: es
+categories:
+  - slug: relato
+    url: "/relatos"
+    image: "/img/relatos.jpg"
+    title: "Relatos"
+    desc: "Ideas mamarrachudas inspiradamente alineadas a disposición de los lectores."
+  - slug: lab
+    url: "/relatos"
+    image: "/img/relatos.jpg"
+    title: "Labs "
+    desc: "Hechizos informáticos invocadores de lógicas <s>optimistamente</s> no tan difusas."
+---
+
+<!-- Page Header -->
+{% if page.background %}
+<header
+  class="masthead"
+  style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')"
+>
+  {% else %}
+  <header class="masthead">
+    {% endif %}
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 col-md-10 mx-auto">
+          <div class="page-heading">
+            <h1>{{ page.title }}</h1>
+            {% if page.description %}
+            <span class="subheading">{{ page.description }}</span>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container-fluid posts-content-container">
+    <!-- Categorias -->
+    <div class="row">
+      <div class="d-block .d-sm-none .d-md-none col-lg-2"></div>
+
+      <div class="col-sm-10 col-md-10 col-lg-8 mx-auto page-content">
+        <!-- <h2>Ver más</h2> -->
+        <h1 class="display-3 categories-intro">
+          Sí, por estos lares puedes ver los tipos de cosas que se comparten en
+          esta página-mundo-rincón experimental.
+        </h1>
+
+        <div class="jumbotron categories-container">
+          <div class="row">
+            {%for category in page.categories%}
+            <div class="col-md-6">
+              <div class="category-card">
+                <div class="card-body">
+                  {%if category.slug == 'relato'%}
+                  <div class="fa fa-file-alt" aria-hidden="true"></div>
+                  {%elsif category.slug == 'lab'%}
+                  <div class="fa fa-keyboard" aria-hidden="true"></div>
+                  {%endif%}
+                  <h5 class="category-card-title category-{{category.slug}}">
+                    {{category.title}}
+                  </h5>
+                  <p class="card-text">{{category.desc}}</p>
+                </div>
+              </div>
+            </div>
+            {%endfor%}
+          </div>
+        </div>
+      </div>
+
+      <div class="d-block .d-sm-none .d-md-none col-lg-2"></div>
+    </div>
+    <div class="row">
+      <div class="d-block .d-sm-none .d-md-none col-lg-2"></div>
+
+      <div class="col-lg-8 page-content">
+        <h1 class="display-3 categories-intro">
+          Y por acá, puedes ver las <b>publicaciones...</b>
+        </h1>
+        <br />
+        <!-- Ultimos relatos -->
+
+        <div class="jumbotron posts-container">
+          <div class="row">
+
+           
+
+            {% for post in paginator.posts %}
+
+            <div class="col-12">
+              <div class="row post-preview">
+                <div class="col-12 post-info">
+                  <span class="post-title">
+                    {%if post.category == 'relato'%}
+                    <span class="fa fa-file-alt" aria-hidden="true"></span>
+                    {%elsif post.category == 'lab'%}
+                    <span class="fa fa-keyboard" aria-hidden="true"></span>
+                    {%endif%} {{ post.title }} |
+                  </span>
+
+                  {% if post.subtitle %}
+                  <span class="post-subtitle">{{ post.subtitle }}</span> | {%
+                  endif %}
+                  <span class="post-author post-author-label">
+                    de {{ post.author }}
+                  </span>
+                  <a class="btn post-btn" href="{{post.url}}">
+                    {%if post.category == 'relato'%} Leer {%elsif post.category
+                    == 'lab'%} Ver {%endif%}
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {% endfor %}
+            {%if paginator.total_pages>1%}
+            <div class="pagination-container">
+
+              {%if paginator.page > 1%}
+                {% if paginator.previous_page %}
+                  <a href="{{ paginator.previous_page_path }}" class="btn paginator-btn">
+                    <i class="fa fa-arrow-left"></i>
+                  </a>
+                {% else %}
+                  <span class="btn paginator-btn"><i class="fa fa-arrow-left"></i></span>
+                {% endif %}
+              {% endif %}
+
+              {%if paginator.page < paginator.total_pages%}
+                {% if paginator.next_page %}
+                  <a href="{{ paginator.next_page_path }}" class="btn paginator-btn">
+                    <i class="fa fa-arrow-right"></i>
+                  </a>
+                {% else %}
+                  <span class="btn paginator-btn">
+                    <i class="fa fa-arrow-right"></i>
+                  </span>
+                {% endif %}
+              {% endif %}
+                
+              <span class="page-number">
+                {{ paginator.page }} / {{ paginator.total_pages }}
+              </span>
+              {% endif %}
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-block .d-sm-none .d-md-none col-lg-2"></div>
+
+      <div class="d-block .d-sm-none .d-md-none col-lg-1"></div>
+    </div>
+    <br />
+    
+  </div>
+</header>

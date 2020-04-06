@@ -26,20 +26,23 @@
         </li>
       
         <li class="nav-item">
-          {% if page.slug == "posts"%}
-            <a class="nav-link navbar-active" href="{{ "/posts" | relative_url }}">Relatos</a>
+          {% if page.slug == "experimentos"%}
+            <a class="nav-link navbar-active" href="{{ "/experimentos" | relative_url }}">Experimentos</a>
           {% else %}
-            <a class="nav-link" href="{{ "/posts" | relative_url }}">Relatos</a>
+            <a class="nav-link" href="{{ "/experimentos" | relative_url }}">Experimentos</a>
           {% endif %}
         </li>
-            
+
+     
         <li class="nav-item">
           {% if page.slug == "apoyar-rg"%}
-            <a class="nav-link navbar-active" href="{{ "/apoyar-rg" | relative_url }}">Apoya a RG</a>
+            <a class="nav-link navbar-active" href="{{ "/apoyar-rg" | relative_url }}">Apoya a RG <i class="fa fa-heart"></i></a>
           {% else %}
-            <a class="nav-link" href="{{ "/apoyar-rg" | relative_url }}">Apoya a RG</a>
+            <a class="nav-link" href="{{ "/apoyar-rg" | relative_url }}">Apoya a RG <i class="fa fa-heart"></i></a>
           {% endif %}
         </li>
+
+       
 
       </ul>
     </div>

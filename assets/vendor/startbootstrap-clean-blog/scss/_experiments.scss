@@ -1,0 +1,34 @@
+.category-card{
+    width: 100%;
+    .category-card-title{
+        color: #4B70D0;
+        font-size: 1.5rem;
+     }
+    
+    text-align: center;
+    .fa{
+        color: #4B70D0 ;
+        font-size: 5rem;
+        margin-bottom: 10px;
+    }
+    a {
+        background-color: #69559D;
+        padding: 5px 10px;
+        color:white;
+        font-weight: bolder;
+
+        &:hover{
+           text-decoration: none !important;
+        }
+    }
+
+    padding: 0 !important;
+}
+
+.categories-intro{
+    font-size: 3rem !important
+}
+
+.categories-container{
+    background-color: rgba(#4B70D0, 0.1);
+  }
