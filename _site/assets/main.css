@@ -68,9 +68,7 @@ header.masthead { background: no-repeat center center; background-color: #eee; b
 
 header.masthead .overlay { position: absolute; top: 0; left: 0; height: 100%; width: 100%; background-color: #9BE3BF; opacity: 0.2; }
 
-header.masthead .page-heading, header.masthead .post-heading, header.masthead .site-heading { padding: 200px 0 150px; color: white; }
-
-@media only screen and (min-width: 768px) { header.masthead .page-heading, header.masthead .post-heading, header.masthead .site-heading { padding: 200px 0; } }
+header.masthead .page-heading, header.masthead .post-heading, header.masthead .site-heading { padding: 100px 0; color: white; }
 
 header.masthead .post-heading { text-align: center; }
 
