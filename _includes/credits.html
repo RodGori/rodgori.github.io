@@ -1,0 +1,27 @@
+<hr />
+<div class="credits-collabs-container">
+  <span>
+    <b>
+      Escrito por:
+    </b>
+  </span>
+  {{page.author}}
+  <br />
+
+  {% if page.collaborators %}
+
+  <span>
+    <b>
+      En colaboración con:
+    </b>
+  </span>
+
+  {% for collaborator in page.collaborators%}
+  <span class="collaborator-info">
+    <span class="collaborator-name">{{collaborator.name}}: </span> 
+    {{collaborator.desc}}. Puedes ver sus creaciones
+    <a href="{{collaborator.link}}" target="_blank">aquí.</a>
+  </span>
+
+  {%endfor%} {%endif%}
+</div>

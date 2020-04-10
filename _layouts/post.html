@@ -4,7 +4,10 @@ layout: default
 
 <!-- Page Header -->
 {% if page.background %}
-<header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
+<header
+  class="masthead"
+  style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')"
+>
   {% else %}
   <header class="masthead">
     {% endif %}
@@ -16,10 +19,48 @@ layout: default
             {% if page.subtitle %}
             <h2 class="subheading">{{ page.subtitle }}</h2>
             {% endif %}
+
+            <h5>Escrito por: {{ page.author }}</h5>
+            {%if page.collaborator%}
+            <h5 class="collaborator-info">
+              {{page.collaborator.desc}} <span class="collaborator-name">
+                {{page.collaborator.name}} | 
+              <span>
+                {%if page.collaborator.fb%}
+                <a href="{{page.collaborator.fb}}" target="_blank">
+                  <i class="fab fa-facebook"></i>
+                </a>
+                {%endif%}
+                
+                {%if page.collaborator.tw%}
+                <a href="{{page.collaborator.tw}}" target="_blank">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                {%endif%}
+                
+                {%if page.collaborator.ig%}
+                <a href="{{page.collaborator.ig}}" target="_blank">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                {%endif%}
+                
+                {%if page.collaborator.web%}
+                <a href="{{page.collaborator.web}}" target="_blank">
+                  <i class="fa fa-globe"></i>
+                </a>
+                {%endif%}
+              </span>
+            </h5>
+            {%endif%}
+
+            <br>
+
             <span class="meta">
-              {{ page.date | date: '%d/%m/%Y' }} &middot; {% include read_time.html
-              content=page.content %}
+              {{ page.date | date: '%d/%m/%Y' }} &middot; {% include
+              read_time.html content=page.content %}
             </span>
+            <br>
+            
           </div>
         </div>
       </div>
@@ -28,34 +69,48 @@ layout: default
 
   <div class="container-fluid page-content-container">
     <div class="row">
-       <div class="d-block .d-sm-none .d-md-none col-lg-3"></div>
+      <div class="d-block .d-sm-none .d-md-none col-lg-3"></div>
 
-        <div class="col-sm-10 col-md-10 col-lg-6 mx-auto page-content">
-         
-
-          {{ content }}
-          <hr>
-
-          {% include cc-licence.html %} 
-          {% comment %} <hr> {% endcomment %}
-
-          <hr>
-
-          <div class="clearfix">
-
-            {% if page.previous.url %}
-            <a class="btn paginator-btn float-left" href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.previous.title }}">&larr; Previous<span class="d-none d-md-inline">
-                Post</span></a>
-            {% endif %}
-            {% if page.next.url %}
-            <a class="btn paginator-btn float-right" href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.next.title }}">Next<span class="d-none d-md-inline">
-                Post</span> &rarr;</a>
-            {% endif %}
-
-          </div>
+      <div class="col-sm-10 col-md-10 col-lg-6 mx-auto page-content">
+        {{ content }}
+      
+        <div class="clearfix">
+          {% if page.previous.url %}
+          <a
+            class="btn paginator-btn float-left"
+            href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}"
+            data-toggle="tooltip"
+            data-placement="top"
+            title="{{ page.previous.title }}"
+            >&larr; Previous<span class="d-none d-md-inline"> Post</span></a
+          >
+          {% endif %} {% if page.next.url %}
+          <a
+            class="btn paginator-btn float-right"
+            href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}"
+            data-toggle="tooltip"
+            data-placement="top"
+            title="{{ page.next.title }}"
+            >Next<span class="d-none d-md-inline"> Post</span> &rarr;</a
+          >
+          {% endif %}
+        </div>
       </div>
       <div class="d-block .d-sm-none .d-md-none col-lg-3"></div>
     </div>
-  </div>
+   
+    <div class="row">
+      <div class="d-block .d-sm-none .d-md-none col-lg-3"></div>
 
- 
+      <div class="col-sm-10 col-md-10 col-lg-6 mx-auto page-content">
+        <hr />
+
+        {% include cc-licence.html %}
+
+        
+      </div>
+
+      <div class="d-block .d-sm-none .d-md-none col-lg-3"></div>
+    </div>
+  </div>
+</header>

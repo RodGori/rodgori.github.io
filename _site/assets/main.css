@@ -221,4 +221,14 @@ footer .fa-inverse { color: #4B70D0 !important; }
 
 .categories-container { background-color: rgba(75, 112, 208, 0.1); }
 
+.credits-collabs-container { padding: 10px 15px; font-size: 1.1rem; }
+
+.collaborator-info { line-height: 1.2rem; }
+
+.collaborator-info a { color: #fff !important; font-weight: bold; }
+
+.collaborator-info a:hover { text-decoration: none; }
+
+.collaborator-name { color: #fff !important; font-weight: bold; }
+
 /*# sourceMappingURL=main.css.map */

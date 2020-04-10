@@ -1,0 +1,20 @@
+.credits-collabs-container{
+    padding: 10px 15px;
+    font-size: 1.1rem;
+}
+
+.collaborator-info{
+    a{
+        color: #fff !important;
+        font-weight: bold;
+        
+        &:hover{
+         text-decoration: none;
+        }
+    }
+    line-height: 1.2rem;
+}
+.collaborator-name{
+    color: #fff !important;
+    font-weight: bold;
+}
